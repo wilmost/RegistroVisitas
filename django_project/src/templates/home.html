@@ -1,7 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %} 
-<h2> home </h2>
-<!-- {{request.product.is_authenticated}} -->
-<p> This is a tamplate </p>
+<div >
+
+   <div>
+     {%load static %}
+     <img src="{% static 'templates/img/logo-datacenter-250x187.jpg' %}" alt="logo">
+    
+   </div> 
+   <div>
+    <h2> Bienvenidos  </h2>
+    
+    <p> Pagina Principal </p>
+
+   </div>
+   
+</div>
+
 {% endblock %} 

@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 
-
     <head>
+        <title>Registro de visitantes Data Center del Estado </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-        <title>Registro de visitantes Data Center del Estado </title>
+        
 
 
     </head> 
 
     <body>  
 
-        <div class = "navbar">
-        {%include 'navbar.html'%}
-        </div>  
-
-        <div id = 'content', name= 'content', class='main'>
-            <div class="row justify-content-center">
-                <div class="col-8">
-                    <h2 class = 'mt-2'>Registro de visitantes</h2>
+        <!-- Container -->
+        <div id= "Container">
+            <!-- Header -->
+            <div id ="header">
+                <div id = "branding" >
+                    
+                    <h1 id = "site-name">Registro de visitantes</h1>
                     <hr class="mt-0 mb-4">
                 </div>
+                <div id = "navbar">
+                {%include 'navbar.html'%}
+                </div>
+                
             </div>
-            {% block content %} 
-            {% endblock %}
+            <!-- END Header -->
+            <div id ="breadcrumbs">
 
-        </div>
+            </div>
+            
+            <div id= "main shifted">  
+                <div id ="content">  
+                    <!-- content  -->
+                {% block content %} 
+                {% endblock %}
+
+
+                </div>
+                     <!-- END content  -->
+                
+                <div id = "footer"></div>
+                
+            </div>
+        
+        </div>  
+         <!-- END Container -->
    
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     
