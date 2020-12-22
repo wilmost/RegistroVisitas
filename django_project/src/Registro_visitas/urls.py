@@ -21,7 +21,7 @@ from visitante.views import registrar_visitante_view, listado_visistas_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home_view), 
+    path('', home_view), 
     path('visitante/', registrar_visitante_view), 
     path('visitas/', listado_visistas_view),
 ]
