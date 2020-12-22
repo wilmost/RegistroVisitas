@@ -1,24 +1,33 @@
-{%extends 'base.html'%}
+{%extends 'base.html'%} 
 
 {%block content %}
 
-<div>
-    <div>
-        <label class="input-group-text" for="">Formulario</label>
-    </div>
+<div class = "container-fluid">
 
-    <div id="form" class="form-group mb-3">
+    <div> 
+        <h2 class="mt-4">Formulario de Registro</h2>
+    </div>
+    
+    <div id= 'form' class="form-group">
         <!-- <form method = POST> {% csrf_token %} -->
-        <form method='POST' class="row g-3 "> {% csrf_token %}
-            {{ form.as_p }}
+        <form method = 'POST'> {% csrf_token %} 
+            <div class="form-group">
+
+            {{ form.as_p}} <!--.as_p -->
             <!-- <input type="text" name= 'title' placeholder="Your title"/> -->
-    </div>
-    <div id="button" class="col-12">
-        <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
-    </div>
+          
+            </div>
+            
+            <div >
+            <button class="btn btn-primary btn-sm" type="submit">Enviar</button>
+            </div>
 
+        </form>
 
-    </form>
+    </div>
+    
+   
+    
 
 </div>
-{% endblock %}
+{% endblock  %}

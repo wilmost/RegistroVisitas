@@ -24,6 +24,4 @@ urlpatterns = [
     path('home/', home_view), 
     path('visitante/', registrar_visitante_view), 
     path('visitas/', listado_visistas_view),
-
-
 ]

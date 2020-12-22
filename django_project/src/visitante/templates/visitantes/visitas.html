@@ -2,35 +2,39 @@
 
 {%block content %}
 
-<div class= "table-responsive"> 
-   <table class = "table table-striped" >
-    <thead>
-        <tr>
-        {% for elements in header %}
-            <th>{{elements}}</th> 
-        {% endfor %}
-        </tr>
-    </thead>
-    <tbody>
-        {% for visitas in object_list %}
-            <tr>
-                <td>{{visitas.nombre}}</td>
-                <td>{{visitas.apellido}}</td>
-                <td>{{visitas.cudula}}</td>
-                <td>{{visitas.institucion}}</td>
-                <td>{{visitas.posicion}}</td>
-                <td>{{visitas.email}}</td>
-                <td>{{visitas.direccion}}</td>
-                <td>{{visitas.celular}}</td>
-                <td>{{visitas.motivo}}</td>
-                <td>{{visitas.hora}}</td>
-            </tr> 
-        {%endfor%}
-    </tbody>
+<div>  
+    <div>
+        <h2 class="mt-4">Reporte de vistas</h2>
+    </div>
+    <div class= "table-responsive"> 
+        <table class = "table table-striped" >
+            <thead>
+                <tr>
+                {% for elements in header %}
+                    <th>{{elements}}</th> 
+                {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for visitas in object_list %}
+                    <tr>
+                        <td>{{visitas.nombre}}</td>
+                        <td>{{visitas.apellido}}</td>
+                        <td>{{visitas.cedula}}</td>
+                        <td>{{visitas.institucion}}</td>
+                        <td>{{visitas.posicion}}</td>
+                        <td>{{visitas.email}}</td>
+                        <td>{{visitas.direccion}}</td>
+                        <td>{{visitas.celular}}</td>
+                        <td>{{visitas.motivo}}</td>
+                        <td>{{visitas.hora}}</td>
+                    </tr> 
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</div> 
 
-   </table>
- 
-</div>
 {%endblock %} 
 
 
