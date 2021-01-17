@@ -18,21 +18,24 @@ class registrar_visitante(forms.ModelForm):
                 'celular',
                 'motivo', 
                 'hora' 
+                
             ] 
 
+# class registrar_entrara_form (froms.ModelForm):
 
             
 
 
 # class registrar_visitante(forms.Form):
-#     nombre              = forms.CharField()
-#     apellido            = forms.CharField()
-#     cedula              = forms.CharField()
-#     institucion         = forms.CharField()
-#     posicion            = forms.CharField()
-#     email               = forms.EmailField()
-#     direccion           = forms.CharField()
-#     celular             = forms.CharField()
-#     motivo              = forms.CharField()
-#     hora                = forms.TimeField()
+#     nombre              = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control'}))
+#     apellido            = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control'}))
+#     cedula              = forms.CharField(max_length = 11, widget=forms.TextInput(attrs={'class' : 'form-control'}))
+#     institucion         = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control'}))
+#     posicion            = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control'}))
+#     email               = forms.EmailField(widget=forms.TextInput(attrs={'class' : 'form-control'}))
+#     direccion           = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control'}))
+#     celular             = forms.CharField(max_length = 10, widget=forms.TextInput(attrs={'class' : 'form-control'}))
+#     motivo              = forms.CharField(widget=forms.TextInput(attrs={'class' : 'form-control'}))
+#     hora                = forms.TimeField(widget=forms.TextInput(attrs={'class' : 'form-control'}))
     
+#     #forms.CharField(widget=forms.TextInput(attrs={'class' : 'myfieldclass'}))

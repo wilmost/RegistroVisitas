@@ -17,13 +17,27 @@ from django.contrib import admin
 from django.urls import path
 
 from pages.views import home_view 
-from visitante.views import registrar_visitante_view, listado_visistas_view
+from visitante.views import (
+     registrar_visitante_view, 
+     listado_visistas_view, 
+     VisitasListView,
+     VisitasDetailView,
+     VisitasCreateView,
+     VisitasUpdateView,
+     VisitasDeleteView
+
+    ) 
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home_view), 
+    path('', home_view), 
     path('visitante/', registrar_visitante_view), 
-    path('visitas/', listado_visistas_view),
-
-
+    path('reportes/', listado_visistas_view), 
+    path('visitante_list/', VisitasListView.as_view()),
+    path('visita/<int:pk>/', VisitasDetailView.as_view(), name='visita-detail'),
+    path('visita/new/', VisitasCreateView.as_view(), name='visita-create'),
+    path('visita/<int:pk>/update/', VisitasUpdateView.as_view(), name='visita-update'),
+    path('visita/<int:pk>/delete/', VisitasDeleteView.as_view(), name='visita-delete'),
+    
 ]
