@@ -1,0 +1,53 @@
+{%extends 'base.html'%} 
+
+{%block content %}
+ 
+<div id= 'content-main'>
+
+    <div class="card-body">
+        <dl class="row">
+          <dt class="col-sm-3">Nombre: </dt>
+          <dd class="col-sm-9">{{object.nombre}}</dd> 
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-3">Apellido: </dt>
+          <dd class="col-sm-9">{{object.apellido}}</dd> 
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-3">Cedula: </dt>
+          <dd class="col-sm-9">{{object.cedula}}</dd> 
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-3">Institucion: </dt>
+          <dd class="col-sm-9">{{object.institucion}}</dd>  
+        </dl> 
+        <dl class="row">
+          <dt class="col-sm-3">Posicion: </dt>
+          <dd class="col-sm-9">{{object.posicion}}</dd> 
+        </dl> 
+        <dl class="row">
+          <dt class="col-sm-3">Email: </dt>
+          <dd class="col-sm-9">{{object.email}}</dd> 
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-3">Motivo de la visita: </dt>
+          <dd class="col-sm-9">{{object.motivo}}</dd> 
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-3">Hora: </dt>
+          <dd class="col-sm-9">{{object.hora}}</dd> 
+        </dl>
+        <dl class="row">
+          <dt class="col-sm-3">Fecha: </dt>
+          <dd class="col-sm-9">{{object.fecha}}</dd> 
+        
+        <div>
+            <a class="btn btn-outline-primary" href ="{%url 'visita-update' object.id %}">Modificar</a>
+            <a class="btn btn-outline-primary" href ="{%url 'visita-delete' object.id %}">Eliminar</a>
+
+        </div>
+    
+</div>
+
+
+{%endblock %} 

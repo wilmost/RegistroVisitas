@@ -1,0 +1,47 @@
+{%extends 'base.html'%} 
+
+{%block content %}
+
+<div id= 'content-main'>
+
+    <div class="bg-light border-right">
+        <a class="btn btn-link" href ="{%url 'visita-create' %}">Agendar</a>
+       
+    </div>
+    <div class= 'table-responsive'>
+
+        <table class="table table-borderless table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Institucion</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Hora</th>
+                <th scope="col">Motivo</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for visitas in object_list  %} 
+                <tr>
+                    <th scope = 'row'><a class="mr-2" href="{% url 'visita-detail' visitas.id %}">{{ visitas.id }}</a></th>
+                    <td>{{visitas.institucion}}</td>
+                    <td>{{visitas.fecha}}</td>
+                    <td>{{visitas.hora}}</td>
+                    <td>{{visitas.motivo}}</td>
+                    
+                </tr>
+                    
+                    
+
+                {% endfor %}
+ 
+            </tbody>   
+        </table>  
+    </div>    
+</div>
+
+
+
+
+
+{%endblock %} 
