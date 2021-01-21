@@ -34,7 +34,7 @@ urlpatterns = [
     path('', home_view), 
     path('visitante/', registrar_visitante_view), 
     path('reportes/', listado_visistas_view), 
-    path('visitante_list/', VisitasListView.as_view()),
+    path('visitante_list/', VisitasListView.as_view(), name = 'visita-lista'),
     path('visita/<int:pk>/', VisitasDetailView.as_view(), name='visita-detail'),
     path('visita/new/', VisitasCreateView.as_view(), name='visita-create'),
     path('visita/<int:pk>/update/', VisitasUpdateView.as_view(), name='visita-update'),

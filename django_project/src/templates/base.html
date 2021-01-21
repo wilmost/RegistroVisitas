@@ -18,6 +18,7 @@
 
   <!-- Custom styles for this template -->
   <link href="{% static 'css/simple-sidebar.css' %}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 
 </head>
 
@@ -34,7 +35,7 @@
         <a href="/" class="list-group-item list-group-item-action bg-primary">Home</a>
         <a href="/visitante_list/" class="list-group-item list-group-item-action bg-primary">Manejo de Visitas</a>
         <a href="/reportes" class="list-group-item list-group-item-action bg-primary">Reportes </a>
-        <a href="configuracion" class="list-group-item list-group-item-action bg-primary">Configuracion </a>
+        <a href= "#" class="list-group-item list-group-item-action bg-primary">Configuracion </a>
         <!-- <a href="#" class="list-group-item list-group-item-action bg-primary">Status</a> -->
       </div>
     </div>
@@ -86,15 +87,16 @@
 
           <!-- <div class="container-fluid" id = "page-content"> 
          -->
-        <main role="main" class="container">
+        <main role="main" class="container-fluid">
           <div class="row" id = "page-content"> 
-            <div class="col-md-8">
+            <div class="col"></div>
+            <div class="col-10">
               {% block content %}
 
 
               {% endblock %}
             </div>
-            <div class="col-md-4">
+            <div class="col">
               <!-- <div class="content-section">
                 <h3>Our Sidebar</h3>
               </div> -->
